@@ -22,7 +22,7 @@ public abstract class Car implements Moveable{
         x = 0;
         y = 0;
     }
-    public void setCurrentSpeed(double speed) {
+    private void setCurrentSpeed(double speed) {
         if(speed > enginePower) {
             this.currentSpeed = enginePower;
             System.out.print("speed too high, was set to enginePower");
@@ -84,11 +84,11 @@ public abstract class Car implements Moveable{
     public void stopEngine(){
         currentSpeed = 0;
     }
-    public void incrementSpeed(double amount){
+    private void incrementSpeed(double amount){
         setCurrentSpeed(getCurrentSpeed() + speedFactor() * amount);
     }
  
-    public void decrementSpeed(double amount){
+    private void decrementSpeed(double amount){
         setCurrentSpeed(getCurrentSpeed() - speedFactor() * amount);
     }
     public void move() {
