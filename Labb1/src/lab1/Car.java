@@ -42,7 +42,7 @@ public abstract class Car implements Moveable{
         color = clr;
     }
  
-    public void setDir(double dir) {
+    private void setDir(double dir) {
         if(dir > 0) this.dir = dir % (2 * Math.PI);
         if(dir < 0) this.dir = (2 * Math.PI) -((-dir) % (2 * Math.PI));
     }
